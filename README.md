@@ -1,2 +1,3 @@
 # mp-web-tool.github.io-verification
-verification
+このtoolはM:pで認証を行うことができます。
+それだけです
